@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旺旺的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 主要内容区域 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://annotation.ks3-cn-beijing.ksyuncs.com/manual/%E8%99%9A%E6%8B%9F%E5%A4%B4%E5%83%8F.png') center/cover;
+        }
+
+        .hero-content {
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            margin-bottom: 30px;
+            color: #00ff9d;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            letter-spacing: 3px;
+            opacity: 0.9;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(0, 255, 157, 0.8),
+                             0 0 30px rgba(0, 255, 157, 0.6);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 关于我部分 */
+        .about {
+            padding: 100px 0;
+            background-color: #1a1a1a;
+        }
+
+        .about h2 {
+            color: #00ff9d;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        /* 技能部分 */
+        .skills {
+            padding: 100px 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 联系方式 */
+        .contact {
+            padding: 100px 0;
+            background-color: #1a1a1a;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #00ff9d;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            color: #00ff9d;
+        }
+    </style>
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>王旺旺</h1>
+            <p>资深产品经理 / 用户体验设计师</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <p>我是一名拥有多年产品经理经验的专业人士，专注于用户体验设计和产品战略规划。在工作中，我始终坚持以用户为中心的设计理念，善于通过数据分析和用户研究来优化产品体验。</p>
+            <p>曾负责过多个大型平台的规划和落地，对产品生命周期管理、用户需求分析、产品策略制定等方面有着深入的理解和实践经验。</p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>专业技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>产品规划</h3>
+                    <p>• 产品战略制定<br>
+                       • 需求分析与管理<br>
+                       • 产品路线图规划<br>
+                       • 商业模式设计</p>
+                </div>
+                <div class="skill-card">
+                    <h3>用户研究</h3>
+                    <p>• 用户访谈<br>
+                       • 用户画像<br>
+                       • 竞品分析<br>
+                       • 数据分析</p>
+                </div>
+                <div class="skill-card">
+                    <h3>项目管理</h3>
+                    <p>• 敏捷开发<br>
+                       • 跨团队协作<br>
+                       • 进度把控<br>
+                       • 风险管理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>联系方式</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>your.email@example.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-weixin"></i>
+                    <p>WeChat_ID</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p>LinkedIn主页</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
